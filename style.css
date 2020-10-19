@@ -1,0 +1,17 @@
+button {
+    margin-left: 10px;
+}
+
+.row {
+    margin: 0;
+    padding: 5px;
+}
+
+div.card.weather {
+    border: none;
+}
+
+div.d-flex.justify-content-between.col-lg-2 {
+    margin-right: 30px;
+    border-radius: 3px;
+}

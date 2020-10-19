@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="jumbotron text-center p-3">
+      <h1 class="display-5">Weather Dashboard</h1>
+    </div>
+    <div class="container">
+      <div class="card search-result">
+        <div class="card-body">
+          <form>
+            <div class="form-row justify-content-center">
+              <div class="form-group col-md-6 text-center">
+                <label for="searchterm">City Name</label>
+                <input type="search" class="form-control" id="city-name" />
+              </div>
+            </div>
+            <div class="form-group text-center mx-2">
+              <button class="btn btn-primary" id="search">Search</button>
+              <button class="btn btn-primary">Clear Results</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br />
+      <div class="card weather">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 p-0"><h5>5-Day Forecast</h5></div>
+            <div class="row 5-day-forcast p-0">
+              <div class="d-flex justify-content-between col-lg-2 bg-primary day-one">
+                <p>Date <br>
+                  Icon <br>
+                  Temp: 86.4 F
+                  Humidity: 43%
+                </p>
+              </div>
+              <div class="d-flex justify-content-between col-lg-2 bg-primary day-two"<p>Date <br>
+                  Icon <br>
+                  Temp: 86.4 F
+                  Humidity: 43%
+                </p></div>
+              <div class="d-flex justify-content-between col-lg-2 bg-primary day-three"><p>Date <br>
+                  Icon <br>
+                  Temp: 86.4 F
+                  Humidity: 43%
+                </p></div>
+              <div class="d-flex justify-content-between col-lg-2 bg-primary day-four"><p>Date <br>
+                  Icon <br>
+                  Temp: 86.4 F
+                  Humidity: 43%
+                </p></div>
+              <div class="d-flex justify-content-between col-lg-2 bg-primary day-five"><p>Date <br>
+                  Icon <br>
+                  Temp: 86.4 F
+                  Humidity: 43%
+                </p></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

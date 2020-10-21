@@ -1,5 +1,3 @@
-// api key = a1f89a9256d059b7eb136f9da385a577
-// API call url = api.openweathermap.org/data/2.5/weather?q={ city name }&appid=a1f89a9256d059b7eb136f9da385a577;
 $(document).ready(function () {
   loadDefaultCity();
   // search typing city name button
@@ -24,7 +22,6 @@ $(document).ready(function () {
         "https://openweathermap.org/img/wn/" +
         response.weather[0].icon +
         "@2x.png";
-      console.log("var iconUrl: " + iconUrl);
       $("h2.cityName").html(response.name + " " + "(" + moment().format("L") + ")");
       $("#weatherIcon").attr("src", iconUrl);
       $("p.temp").text(
@@ -34,7 +31,7 @@ $(document).ready(function () {
       );
       $("p.humidity").text("Humidity: " + response.main.humidity + "%");
       $("p.wind").text("Wind Speed: " + response.wind.speed + " " + "MPH");
-      $("p.UVindex").text("UV Index: ");
+      // $("p.UVindex").text("UV Index: ");
     });
   });
 });
@@ -59,7 +56,6 @@ $(".list-group-item").on("click", function (event) {
         "https://openweathermap.org/img/wn/" +
         response.weather[0].icon +
         "@2x.png";
-      console.log("var iconUrl: " + iconUrl);
       $("h2.cityName").html(response.name + " " + "(" + moment().format("L") + ")");
       $("#weatherIcon").attr("src", iconUrl);
       $("p.temp").text(
@@ -69,7 +65,7 @@ $(".list-group-item").on("click", function (event) {
       );
       $("p.humidity").text("Humidity: " + response.main.humidity + "%");
       $("p.wind").text("Wind Speed: " + response.wind.speed + " " + "MPH");
-      $("p.UVindex").text("UV Index: ");
+      // $("p.UVindex").text("UV Index: ");
     });
 });
 
@@ -91,7 +87,6 @@ function loadDefaultCity() {
         "https://openweathermap.org/img/wn/" +
         response.weather[0].icon +
         "@2x.png";
-      console.log("var iconUrl: " + iconUrl);
       $("h2.cityName").html(response.name + " " + "(" + moment().format("L") + ")");
       $("#weatherIcon").attr("src", iconUrl);
       $("p.temp").text(
@@ -104,6 +99,12 @@ function loadDefaultCity() {
       $("p.UVindex").text("UV Index: ");
     });
 }
+
+function call5DayForecast() {
+  var 5dayQueryUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=a1f89a9256d059b7eb136f9da385a577";
+}
+
+
 
 //******* add UV index button that changes color or certain index levels (green to red)
 // http://api.openweathermap.org/data/2.5/uvi?lat={lat}&lon={lon}&appid={API key} <-- UV index API

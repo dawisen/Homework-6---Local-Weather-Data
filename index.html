@@ -14,60 +14,102 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="jumbotron text-center p-3">
+    <div class="jumbotron text-center p-3 mb-0">
       <h1 class="display-5">Weather Dashboard</h1>
     </div>
-    <div class="container">
-      <div class="card search-result">
-        <div class="card-body">
+    <!-- sidebar on the left -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="nav flex-column sidenav float-left">
           <form>
-            <div class="form-row justify-content-center">
-              <div class="form-group col-md-6 text-center">
-                <label for="searchterm">City Name</label>
-                <input type="search" class="form-control" id="city-name" />
-              </div>
-            </div>
-            <div class="form-group text-center mx-2">
-              <button class="btn btn-primary" id="search">Search</button>
-              <button class="btn btn-primary">Clear Results</button>
+            <label for="searchterm">Search for a City:</label>
+            <div class="input-group">
+              <input type="search" class="form" id="city-name" />
+              <button
+                class="btn btn-primary fas fa-search"
+                id="search"
+              ></button>
             </div>
           </form>
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a href="#">Austin</a></li>
+              <li class="list-group-item"><a href="#">Chicago</a></li>
+              <li class="list-group-item"><a href="#">New York</a></li>
+              <li class="list-group-item"><a href="#">Orlando</a></li>
+              <li class="list-group-item"><a href="#">San Francisco</a></li>
+              <li class="list-group-item"><a href="#">Seattle</a></li>
+              <li class="list-group-item"><a href="#">Denver</a></li>
+              <li class="list-group-item"><a href="#">Atlanta</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <br />
-      <div class="card weather">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 p-0"><h5>5-Day Forecast</h5></div>
-            <div class="row 5-day-forcast p-0">
-              <div class="d-flex justify-content-between col-lg-2 bg-primary day-one">
-                <p>Date <br>
-                  Icon <br>
-                  Temp: 86.4 F
-                  Humidity: 43%
-                </p>
-              </div>
-              <div class="d-flex justify-content-between col-lg-2 bg-primary day-two"<p>Date <br>
-                  Icon <br>
-                  Temp: 86.4 F
-                  Humidity: 43%
-                </p></div>
-              <div class="d-flex justify-content-between col-lg-2 bg-primary day-three"><p>Date <br>
-                  Icon <br>
-                  Temp: 86.4 F
-                  Humidity: 43%
-                </p></div>
-              <div class="d-flex justify-content-between col-lg-2 bg-primary day-four"><p>Date <br>
-                  Icon <br>
-                  Temp: 86.4 F
-                  Humidity: 43%
-                </p></div>
-              <div class="d-flex justify-content-between col-lg-2 bg-primary day-five"><p>Date <br>
-                  Icon <br>
-                  Temp: 86.4 F
-                  Humidity: 43%
-                </p></div>
+      <!-- main content below -->
+        <main>
+          <div class="card">
+            <div class="card-body">
+              <div><h2 class="cityName">City Name Here</h2><img id="weatherIcon"></div>
+              <p class="temp">City weather data goes here</p>
+              <p class="humidity"></p>
+              <p class="wind"></p>
+              <p class="UVindex"></p>
             </div>
-        </div>
+          </div>
+          <br />
+          <div class="card weather">
+            <div class="row">
+              <div class="col-lg-12 p-0"><h5>5-Day Forecast</h5></div>
+              <div class="d-flex flex-wrap 5-day-forcast">
+                <div
+                  class="card justify-content-between bg-primary day-one m-2"
+                >
+                  <p>
+                    Date <br />
+                    Icon <br />
+                    Temp: 86.4 F Humidity: 43%
+                  </p>
+                </div>
+                <div
+                  class="card justify-content-between bg-primary day-two m-2"
+                >
+                  <p>
+                    Date
+                    <br />
+                    Icon <br />
+                    Temp: 86.4 F Humidity: 43%
+                  </p>
+                </div>
+                <div
+                  class="card justify-content-between bg-primary day-three m-2"
+                >
+                  <p>
+                    Date <br />
+                    Icon <br />
+                    Temp: 86.4 F Humidity: 43%
+                  </p>
+                </div>
+                <div
+                  class="card justify-content-between bg-primary day-four m-2"
+                >
+                  <p>
+                    Date <br />
+                    Icon <br />
+                    Temp: 86.4 F Humidity: 43%
+                  </p>
+                </div>
+                <div
+                  class="card justify-content-between bg-primary day-five m-2"
+                >
+                  <p>
+                    Date <br />
+                    Icon <br />
+                    Temp: 86.4 F Humidity: 43%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -76,6 +118,12 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/34f117fa7f.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://MomentJS.com/downloads/moment.js"></script>
   </body>
 </html>
